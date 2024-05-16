@@ -1,6 +1,6 @@
 {
   "name": "@devjacob/changelog-generation",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A GitHub action made to automatically generate a changelog",
   "main": "./src/index.js",
   "author": "Jacob Paulin",
