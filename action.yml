@@ -1,0 +1,30 @@
+name: Changelog Generation
+description: A simple action which automatically generates a changelog for the current commit
+author: Jacob Paulin
+branding:
+  icon: edit
+  color: red
+
+runs:
+  using: node20
+  main: src/index.js
+
+inputs:
+  github-token:
+    description: Github token
+    default: ${{ github.token }}
+    required: false
+
+  committer-name:
+    description: The git user.name to use for the commit
+    default: Changelog Doctor
+    required: false
+
+  committer-email:
+    description: The git user.email to use for the commit
+    default: devjacob.changelog.generation@github.com
+    required: false
+
+outputs:
+  changelog:
+    description: The content of the changelog
