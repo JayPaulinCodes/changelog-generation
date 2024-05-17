@@ -5,7 +5,7 @@ const readFile = require("fs/promises").readFile;
 
 const dirname = fileURLToPath(new URL('.', import.meta.url))
 
-export async function createWriterOpts () {
+async function createWriterOpts () {
   const [template, header, commit, footer] = await Promise.all([
     readFile(resolve(dirname, './templates/template.hbs'), 'utf-8'),
     readFile(resolve(dirname, './templates/header.hbs'), 'utf-8'),
@@ -116,3 +116,5 @@ function getWriterOpts () {
     notesSort: compareFunc
   }
 }
+
+module.exports = createWriterOpts;

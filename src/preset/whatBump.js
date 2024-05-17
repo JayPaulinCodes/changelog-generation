@@ -1,4 +1,4 @@
-export function whatBump (commits) {
+function whatBump (commits) {
     let level = 2
     let breakings = 0
     let features = 0
@@ -22,3 +22,5 @@ export function whatBump (commits) {
         : `There are ${breakings} BREAKING CHANGES and ${features} features`
     }
   }
+
+module.exports = whatBump;

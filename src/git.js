@@ -4,7 +4,7 @@ const exec = _exec.exec;
 
 const { GITHUB_REPOSITORY, ENV } = process.env
 
-export default class Git {
+class Git {
     #actionConfig = new Config();
     commandsRun = [];
 
@@ -99,3 +99,5 @@ export default class Git {
         return this.#execute(`tag -a ${tag} -m "${tag}"`);
     }
 }
+
+module.exports = Git;

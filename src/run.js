@@ -3,7 +3,7 @@ const Config = require("./config.js");
 const Git = require("./git.js");
 const core = require("@actions/core");
 
-export default async function run() {
+async function run() {
     const preset = await require("./preset/index")();
     const config = new Config();
     const git = new Git(config);
@@ -31,3 +31,5 @@ export default async function run() {
         core.warning(`Was unable to create summary! Error: "${err}"`)
     }
 }
+
+module.exports = run;

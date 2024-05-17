@@ -39646,13 +39646,8 @@ module.exports = function(argument) {
 /***/ }),
 
 /***/ 8923:
-/***/ ((__unused_webpack_module, __webpack_exports__, __nccwpck_require__) => {
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
-"use strict";
-__nccwpck_require__.r(__webpack_exports__);
-/* harmony export */ __nccwpck_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ generateStringChangelog)
-/* harmony export */ });
 const conventionalChangelog = __nccwpck_require__(5565);
 
 async function getChangelogStream(
@@ -39714,17 +39709,13 @@ function generateStringChangelog(
     });
 }
 
+module.exports = generateStringChangelog;
 
 /***/ }),
 
 /***/ 4570:
-/***/ ((__unused_webpack_module, __webpack_exports__, __nccwpck_require__) => {
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
-"use strict";
-__nccwpck_require__.r(__webpack_exports__);
-/* harmony export */ __nccwpck_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ Config)
-/* harmony export */ });
 const core = __nccwpck_require__(2186);
 const getInput = core.getInput;
 const getBooleanInput = core.getBooleanInput;
@@ -39754,16 +39745,14 @@ class Config {
     }
 }
 
+module.exports = Config;
+
+
 /***/ }),
 
 /***/ 109:
-/***/ ((__unused_webpack_module, __webpack_exports__, __nccwpck_require__) => {
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
-"use strict";
-__nccwpck_require__.r(__webpack_exports__);
-/* harmony export */ __nccwpck_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ Git)
-/* harmony export */ });
 const Config = __nccwpck_require__(4570);
 const _exec = __nccwpck_require__(1514);
 const exec = _exec.exec;
@@ -39866,20 +39855,17 @@ class Git {
     }
 }
 
+module.exports = Git;
+
 
 /***/ }),
 
 /***/ 4096:
-/***/ ((__unused_webpack_module, __webpack_exports__, __nccwpck_require__) => {
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
-"use strict";
-__nccwpck_require__.r(__webpack_exports__);
-/* harmony export */ __nccwpck_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ createPreset)
-/* harmony export */ });
-const createParserOpts = (__nccwpck_require__(8162)/* .createParserOpts */ .T);
-const createWriterOpts = (__nccwpck_require__(3541)/* .createWriterOpts */ .T);
-const whatBump = (__nccwpck_require__(4435)/* .whatBump */ .L);
+const createParserOpts = (__nccwpck_require__(8162).createParserOpts);
+const createWriterOpts = (__nccwpck_require__(3541).createWriterOpts);
+const whatBump = (__nccwpck_require__(4435).whatBump);
 
 
 async function createPreset () {
@@ -39890,15 +39876,14 @@ async function createPreset () {
   }
 }
 
+module.exports = createPreset;
+
+
 /***/ }),
 
 /***/ 8162:
-/***/ ((__unused_webpack_module, __webpack_exports__, __nccwpck_require__) => {
+/***/ ((module) => {
 
-"use strict";
-/* harmony export */ __nccwpck_require__.d(__webpack_exports__, {
-/* harmony export */   "T": () => (/* binding */ createParserOpts)
-/* harmony export */ });
 function createParserOpts () {
     return {
       headerPattern: /^(\w*)(?:\((.*)\))?: (.*)$/,
@@ -39913,15 +39898,14 @@ function createParserOpts () {
     }
   }
 
+module.exports = createParserOpts;
+
+
 /***/ }),
 
 /***/ 4435:
-/***/ ((__unused_webpack_module, __webpack_exports__, __nccwpck_require__) => {
+/***/ ((module) => {
 
-"use strict";
-/* harmony export */ __nccwpck_require__.d(__webpack_exports__, {
-/* harmony export */   "L": () => (/* binding */ whatBump)
-/* harmony export */ });
 function whatBump (commits) {
     let level = 2
     let breakings = 0
@@ -39947,15 +39931,14 @@ function whatBump (commits) {
     }
   }
 
+module.exports = whatBump;
+
+
 /***/ }),
 
 /***/ 3541:
-/***/ ((__unused_webpack_module, __webpack_exports__, __nccwpck_require__) => {
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
-"use strict";
-/* harmony export */ __nccwpck_require__.d(__webpack_exports__, {
-/* harmony export */   "T": () => (/* binding */ createWriterOpts)
-/* harmony export */ });
 const compareFunc = __nccwpck_require__(4623);
 const fileURLToPath = (__nccwpck_require__(7310).fileURLToPath);
 const resolve = (__nccwpck_require__(1017).resolve);
@@ -40075,16 +40058,13 @@ function getWriterOpts () {
   }
 }
 
+module.exports = createWriterOpts;
+
 /***/ }),
 
 /***/ 2475:
-/***/ ((__unused_webpack_module, __webpack_exports__, __nccwpck_require__) => {
+/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
-"use strict";
-__nccwpck_require__.r(__webpack_exports__);
-/* harmony export */ __nccwpck_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ run)
-/* harmony export */ });
 const generateStringChangelog = __nccwpck_require__(8923);
 const Config = __nccwpck_require__(4570);
 const Git = __nccwpck_require__(109);
@@ -40119,6 +40099,8 @@ async function run() {
     }
 }
 
+module.exports = run;
+
 /***/ }),
 
 /***/ 4098:
@@ -40152,7 +40134,7 @@ module.exports = __nccwpck_require__.p + "d2f602acf6d2100e8ba9.js";
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
-module.exports = __nccwpck_require__.p + "ac12f7ac157353289611.js";
+module.exports = __nccwpck_require__.p + "394008aa3d534e58c9f3.js";
 
 /***/ }),
 

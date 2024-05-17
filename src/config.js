@@ -7,7 +7,7 @@ const setSecret = core.setSecret;
 const throwConfigError = (message) => { throw new Error(`Config Error: ${message}`); }
 const throwMissingInputError = (input) => throwConfigError(`Missing the value for input "${input}"`);
 
-export default class Config {
+class Config {
     ["github-token"];
     #overrideConfig;
 
@@ -26,3 +26,5 @@ export default class Config {
         if (this["committer-email"] === "") { throwMissingInputError("committer-email"); }
     }
 }
+
+module.exports = Config;
