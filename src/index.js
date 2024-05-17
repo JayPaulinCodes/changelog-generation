@@ -1,4 +1,4 @@
-import { run } from "./run.js";
+const run = require("./run.js");
 
 try {
     run();

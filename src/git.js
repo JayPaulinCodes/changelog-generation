@@ -1,9 +1,10 @@
-import { exec } from "@actions/exec";
-import { Config } from "./config.js";
+const Config = require("./config.js");
+const _exec = require("@actions/exec");
+const exec = _exec.exec;
 
 const { GITHUB_REPOSITORY, ENV } = process.env
 
-export class Git {
+export default class Git {
     #actionConfig = new Config();
     commandsRun = [];
 

@@ -1,9 +1,13 @@
-import { getInput, getBooleanInput, getMultilineInput, setSecret } from "@actions/core";
+const core = require("@actions/core");
+const getInput = core.getInput;
+const getBooleanInput = core.getBooleanInput;
+const getMultilineInput = core.getMultilineInput;
+const setSecret = core.setSecret;
 
 const throwConfigError = (message) => { throw new Error(`Config Error: ${message}`); }
 const throwMissingInputError = (input) => throwConfigError(`Missing the value for input "${input}"`);
 
-export class Config {
+export default class Config {
     ["github-token"];
     #overrideConfig;
 

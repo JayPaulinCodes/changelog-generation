@@ -1,7 +1,7 @@
-import { readFile } from 'fs/promises'
-import { resolve } from 'path'
-import { fileURLToPath } from 'url'
-import compareFunc from 'compare-func'
+const compareFunc = require("compare-func");
+const fileURLToPath = require("url").fileURLToPath;
+const resolve = require("path").resolve;
+const readFile = require("fs/promises").readFile;
 
 const dirname = fileURLToPath(new URL('.', import.meta.url))
 

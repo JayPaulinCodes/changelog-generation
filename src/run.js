@@ -1,11 +1,9 @@
-import { generateStringChangelog } from "./changelog.js";
-import { Config } from "./config.js";
-import { Git } from "./git.js";
-import { resolve } from "path";
-import * as core from "@actions/core";
-import * as github from "@actions/github";
+const generateStringChangelog = require("./changelog.js");
+const Config = require("./config.js");
+const Git = require("./git.js");
+const core = require("@actions/core");
 
-export async function run() {
+export default async function run() {
     const preset = await require("./preset/index")();
     const config = new Config();
     const git = new Git(config);

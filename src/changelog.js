@@ -29,7 +29,7 @@ async function getChangelogStream(
     );
 }
 
-export function generateStringChangelog(
+export default function generateStringChangelog(
     tagPrefix,
     preset,
     version,
