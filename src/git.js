@@ -1,5 +1,5 @@
 import { exec } from "@actions/exec";
-import { Config } from "./config";
+import { Config } from "./config.js";
 
 const { GITHUB_REPOSITORY, ENV } = process.env
 

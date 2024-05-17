@@ -1,6 +1,6 @@
-import { generateStringChangelog } from "./changelog";
-import { Config } from "./config";
-import { Git } from "./git";
+import { generateStringChangelog } from "./changelog.js";
+import { Config } from "./config.js";
+import { Git } from "./git.js";
 import { resolve } from "path";
 import * as core from "@actions/core";
 import * as github from "@actions/github";
